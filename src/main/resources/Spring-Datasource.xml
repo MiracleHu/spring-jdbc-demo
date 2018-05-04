@@ -4,7 +4,9 @@
 	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
 <!-- new一个对象（DriverManagerDataSource）它的名字叫dataSource
-它的初始化在property里配置 -->
+它的初始化在property里配置
+bean会根据property name去DriverManagerDataSource里寻找setXXX这个方法 
+-->
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">

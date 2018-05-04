@@ -8,6 +8,7 @@
 这样我们就能在App.java里直接使用接口里的方法，不用管是哪个类实现了这个接口 
 new 一个对象（JdbcCustomerDAO）他的名字叫customerDAO
 它的初始化在property里配置
+bean会根据property name去JdbcCustomerDAO里寻找setDataSource这个方法，ref指向另一个bean
 -->
 	<bean id="customerDAO" class="com.yiibai.customer.dao.impl.JdbcCustomerDAO">
 		<property name="dataSource" ref="dataSource" />
