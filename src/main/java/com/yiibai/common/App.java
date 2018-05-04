@@ -11,7 +11,7 @@ public class App
     {
     	ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
     	
-    	//接口由bean配置好了就能当做实例化好的对象来使用了 
+    	//接口由Spring-Customer.xml bean配置好了就能当做实例化好的对象来使用了 
         CustomerDAO customerDAO = (CustomerDAO) context.getBean("customerDAO");
         Customer customer = new Customer(1, "yiibai",29);
         customerDAO.insert(customer);
