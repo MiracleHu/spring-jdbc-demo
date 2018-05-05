@@ -5,10 +5,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.yiibai.customer.dao.CustomerDAO;
 import com.yiibai.customer.model.Customer;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main( String[] args ){
     	ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
     	
     	//接口由Spring-Customer.xml bean配置好了就能当做实例化好的对象来使用了 
