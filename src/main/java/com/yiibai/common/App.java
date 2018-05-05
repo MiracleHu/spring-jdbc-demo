@@ -13,11 +13,11 @@ public class App
     	
     	//接口由Spring-Customer.xml bean配置好了就能当做实例化好的对象来使用了 
         //context相当于map，里面存了好多预先初始化好的Object
-        CustomerDAO customerDAO = (CustomerDAO) context.getBean("customerDAO");
-        Customer customer = new Customer(1, "yiibai",29);
-        customerDAO.insert(customer);
+        CustomerDAO customerDAOImpl = (CustomerDAO) context.getBean("customerDAOImpl");
+        Customer customer = new Customer(5, "ysdfbaizfsd",29);
+        customerDAOImpl.insert(customer);
     	
-        Customer customer1 = customerDAO.findByCustomerId(1);
+        Customer customer1 = customerDAOImpl.findByCustomerId(2);
         System.out.println(customer1);
         
     }

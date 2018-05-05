@@ -10,7 +10,7 @@ new 一个对象（JdbcCustomerDAO）他的名字叫customerDAO
 它的初始化在property里配置
 bean会根据property name去JdbcCustomerDAO里寻找setDataSource这个方法，ref指向另一个bean
 -->
-	<bean id="customerDAO" class="com.yiibai.customer.dao.impl.JdbcCustomerDAO">
+	<bean id="customerDAOImpl" class="com.yiibai.customer.dao.impl.JdbcCustomerDAO">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
