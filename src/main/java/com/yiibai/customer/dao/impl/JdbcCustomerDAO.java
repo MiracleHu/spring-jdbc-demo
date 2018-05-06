@@ -11,9 +11,8 @@ import com.yiibai.customer.model.Customer;
 //这个接口被实现了，但是没有直接通过new一个对象来调用这个类，
 //而是通过用bean调用CustomerDAO接口来使用这个接口实现类
 
-public class JdbcCustomerDAO implements CustomerDAO 
-{
-	private DataSource dataSource;//这里由Spring-Datasource.xml里的beans来设置
+public class JdbcCustomerDAO implements CustomerDAO {
+	private DataSource dataSource;//这里由Spring-Datasource.xml里的beans来设置，这里是操控数据库的关键所在
 	
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
